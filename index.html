@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site</title>
+    <style>
+        /* Variáveis de cores e reset básico para um visual limpo e moderno */
+        :root {
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Layout em grid/flex para os cards de projetos */
+        .cards-container {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            flex: 1 1 calc(33.333% - 24px);
+            min-width: 280px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="margin: 0; font-size: 2.8rem; letter-spacing: 1px;">[Seu Nome]</h1>
+        <p style="margin: 0.5rem 0 0 0; font-size: 1.2rem; color: #bdc3c7;">Desenvolvedor & Estudante de Tecnologia</p>
+    </header>
+
+    <main>
+        <section id="sobre-mim">
+            <h2>Sobre mim</h2>
+            <p style="font-size: 1.1rem; color: #555;">
+                Olá! Sou um estudante de tecnologia atualmente no 4º período, apaixonado por resolver problemas complexos. Tenho foco em desenvolvimento backend e arquitetura de sistemas, com experiência prática em linguagens como Java, Python e C. Quando não estou programando, gosto de explorar os limites da performance de hardware, estudar inteligência artificial generativa e entender a mecânica por trás das coisas funcionarem tão bem no mundo real.
+            </p>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <h3>Gestão de Torneios</h3>
+                    <p style="color: #666; font-size: 0.95rem;">
+                        Desenvolvimento de um sistema completo com operações CRUD usando Java, JPA e Hibernate, focando na persistência eficiente de dados e mapeamento relacional.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Editor CSV Modular</h3>
+                    <p style="color: #666; font-size: 0.95rem;">
+                        Uma aplicação construída em Python utilizando a biblioteca Pandas para manipulação de dados, com estruturação pensada para futura integração com FastAPI/React.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Portfólio IA Generativa</h3>
+                    <p style="color: #666; font-size: 0.95rem;">
+                        Criação de um pipeline de geração e otimização de metadados SEO para mais de 1.000 imagens geradas via IA de difusão, voltadas para bancos de imagens.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="margin: 0; font-size: 0.9rem;">&copy; 2026 [Seu Nome]. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
