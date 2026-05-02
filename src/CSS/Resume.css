@@ -1,0 +1,128 @@
+/* =========================================
+   ESTILOS DO CURRÍCULO (RESUME)
+   ========================================= */
+
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.resume-card {
+  border: 2px solid var(--surface-bright);
+  background-color: var(--surface-container-low);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.resume-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 6px 6px 0px 0px rgba(91, 217, 216, 0.5);
+}
+
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--surface-bright);
+  padding-bottom: 16px;
+}
+
+.resume-title {
+  font-family: var(--font-space);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.resume-subtitle {
+  font-family: var(--font-space);
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.resume-meta {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--outline);
+  background-color: rgba(146, 142, 160, 0.1);
+  padding: 4px 12px;
+  width: fit-content;
+  border-left: 2px solid var(--outline);
+}
+
+.resume-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--on-surface-variant);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.resume-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary);
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-label {
+  font-family: var(--font-space);
+  font-size: 16px;
+  color: var(--tertiary);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  padding: 8px 16px;
+  background-color: var(--surface-container-high);
+  border: 1px solid var(--surface-bright);
+  color: var(--on-surface);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.skill-chip:hover {
+  border-color: var(--tertiary);
+  color: var(--tertiary);
+  background-color: rgba(255, 169, 255, 0.1);
+}
